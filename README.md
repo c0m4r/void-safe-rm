@@ -1,14 +1,6 @@
-## safe-rm for void-linux
+## safe-rm for Void Linux
 
-## xbps
-
-```
-cd void-packages/srcpkgs
-git clone https://github.com/c0m4r/void-linux-safe-rm.git safe-rm
-./xbps-src pkg safe-rm
-sudo xbps-install --repository hostdir/binpkgs safe-rm
-sudo ln -s /usr/bin/safe-rm /usr/local/bin/rm
-```
+https://launchpad.net/safe-rm
 
 ## manual
 
@@ -19,6 +11,16 @@ tar -xvf safe-rm-1.1.0.tar.gz
 cd safe-rm-1.1.0
 make
 sudo cp target/release/safe-rm /usr/bin/
-sudo wget -O /etc/safe-rm.conf https://raw.githubusercontent.com/c0m4r/void-linux-safe-rm/main/srcpkgs/safe-rm/files/safe-rm.conf
+sudo wget -O /etc/safe-rm.conf https://raw.githubusercontent.com/c0m4r/void-safe-rm/main/srcpkgs/safe-rm/files/safe-rm.conf
+sudo ln -s /usr/bin/safe-rm /usr/local/bin/rm
+```
+
+## xbps
+
+```
+cd void-packages/srcpkgs
+git clone https://github.com/c0m4r/void-safe-rm.git safe-rm
+./xbps-src pkg safe-rm
+sudo xbps-install --repository hostdir/binpkgs safe-rm
 sudo ln -s /usr/bin/safe-rm /usr/local/bin/rm
 ```
