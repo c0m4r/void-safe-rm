@@ -29,8 +29,9 @@ sudo ln -s /usr/bin/safe-rm /usr/local/bin/rm
 ### xbps
 
 ```bash
-cd void-packages/srcpkgs
-git clone https://github.com/c0m4r/void-safe-rm.git safe-rm
+cd void-packages
+git clone https://github.com/c0m4r/void-safe-rm.git
+cp -r void-safe-rm/srcpkgs/safe-rm srcpkgs/
 ./xbps-src pkg safe-rm
 sudo xbps-install --repository hostdir/binpkgs safe-rm
 sudo ln -s /usr/bin/safe-rm /usr/local/bin/rm
